@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartAndStopWindowsServices", "StartAndStopWindowsServices\StartAndStopWindowsServices.csproj", "{A9F0C7D8-8F9D-4B37-AA64-4444E533F5FA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsServices", "WindowsServices", "{0F460774-519A-40F5-B577-3C9C01F57B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topshelf", "Topshelf\Topshelf.csproj", "{7BAF0CFE-7292-4CD6-971C-331F21274204}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{A9F0C7D8-8F9D-4B37-AA64-4444E533F5FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9F0C7D8-8F9D-4B37-AA64-4444E533F5FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9F0C7D8-8F9D-4B37-AA64-4444E533F5FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BAF0CFE-7292-4CD6-971C-331F21274204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BAF0CFE-7292-4CD6-971C-331F21274204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BAF0CFE-7292-4CD6-971C-331F21274204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BAF0CFE-7292-4CD6-971C-331F21274204}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7BAF0CFE-7292-4CD6-971C-331F21274204} = {0F460774-519A-40F5-B577-3C9C01F57B04}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {43FA4824-5F49-4427-B85E-CD4C5769DBA7}

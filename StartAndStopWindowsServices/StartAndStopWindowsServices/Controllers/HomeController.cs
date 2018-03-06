@@ -30,7 +30,7 @@ namespace StartAndStopWindowsServices.Controllers
 
         private void Stop()
         {
-            ServiceController sc = new ServiceController("TimeBrokerSvc");
+            ServiceController sc = new ServiceController("MyWindowServiceWithTopshelf");
             if(sc.Status == ServiceControllerStatus.Running)
             {
                 TimeSpan timeOut = TimeSpan.FromMilliseconds(5000);
@@ -41,7 +41,7 @@ namespace StartAndStopWindowsServices.Controllers
 
         private void Start()
         {
-            ServiceController sc = new ServiceController("TimeBrokerSvc");
+            ServiceController sc = new ServiceController("MyWindowServiceWithTopshelf");
             if(sc.Status != ServiceControllerStatus.Running && sc.Status != ServiceControllerStatus.StartPending)
             {
                 TimeSpan timeOut = TimeSpan.FromMilliseconds(5000);
@@ -52,7 +52,7 @@ namespace StartAndStopWindowsServices.Controllers
 
         public ServiceControllerStatus ServiceStatus()
         {
-            ServiceController sc = new ServiceController("TimeBrokerSvc");
+            ServiceController sc = new ServiceController("MyWindowServiceWithTopshelf");
             return sc.Status;
         }
         

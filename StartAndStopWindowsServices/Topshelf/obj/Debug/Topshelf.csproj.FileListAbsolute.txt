@@ -1,0 +1,9 @@
+D:\github\WindowsServicesAsp.netMVC\StartAndStopWindowsServices\Topshelf\bin\Debug\Topshelf.exe.config
+D:\github\WindowsServicesAsp.netMVC\StartAndStopWindowsServices\Topshelf\bin\Debug\Topshelf.exe
+D:\github\WindowsServicesAsp.netMVC\StartAndStopWindowsServices\Topshelf\bin\Debug\Topshelf.pdb
+D:\github\WindowsServicesAsp.netMVC\StartAndStopWindowsServices\Topshelf\bin\Debug\Topshelf.dll
+D:\github\WindowsServicesAsp.netMVC\StartAndStopWindowsServices\Topshelf\bin\Debug\Topshelf.xml
+D:\github\WindowsServicesAsp.netMVC\StartAndStopWindowsServices\Topshelf\obj\Debug\Topshelf.csprojResolveAssemblyReference.cache
+D:\github\WindowsServicesAsp.netMVC\StartAndStopWindowsServices\Topshelf\obj\Debug\Topshelf.csproj.CoreCompileInputs.cache
+D:\github\WindowsServicesAsp.netMVC\StartAndStopWindowsServices\Topshelf\obj\Debug\Topshelf.exe
+D:\github\WindowsServicesAsp.netMVC\StartAndStopWindowsServices\Topshelf\obj\Debug\Topshelf.pdb
