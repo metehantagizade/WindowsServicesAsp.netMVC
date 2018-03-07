@@ -1,14 +1,20 @@
 # WindowsServicesAsp.netMVC
 Introduce how to Start and Stop windows service from Asp.net MVC
 
-At first you should add line bellow to web.config file inside system.web tag
+In this project we introduce 
+-how to create windows service by using Toshelf
+-how to add quartz scheduler to windows service
+-how to start, stop and restart windows service from code
+...
+
+First of all you should add line bellow to web.config file inside system.web tag
 ```html
 <identity impersonate="true" userName="username" password="password" />"
 ```
 username and password refer to windows account
 
-
 Next step is adding System.ServiceProcess dll from add reference panel
+
 -----------------
 To create windows service we use Topshelf library 
 with Topshelf there is no need to create windows service
@@ -47,7 +53,7 @@ namespace WindowsServiceWithTopshelf
   
   To install this project on operating system follow steps bellow:
   - rebuild application as release
-  - run CMD as addministrator
+  - run CMD as administrator
   - go inside bin/release folder of project
   - type 
   ```html
