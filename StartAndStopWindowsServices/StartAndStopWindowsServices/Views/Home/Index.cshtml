@@ -10,7 +10,10 @@
         <input type="submit" id="startbtn" value="start" disabled />
     </form>
     <form method="post" action="@Url.Action("StopService","Home")">
-        <input type="submit" id="stopbtn" value="stop"  />
+        <input type="submit" id="stopbtn" value="stop" />
+    </form>
+    <form method="post" action="@Url.Action("RestartService","Home")">
+        <input type="submit" id="stopbtn" value="stop" />
     </form>
 }
 else
@@ -18,10 +21,13 @@ else
     <h3> service Controller</h3>
     <p>The service is : @ViewBag.status</p>
     <form method="post" action="@Url.Action("StartService","Home")">
-        <input type="submit" id="startbtn" value="start"  />
+        <input type="submit" id="startbtn" value="start" />
     </form>
     <form method="post" action="@Url.Action("StopService","Home")">
         <input type="submit" id="stopbtn" value="stop" disabled />
+    </form>
+    <form method="post" action="@Url.Action("RestartService","Home")">
+        <input type="submit" id="stopbtn" value="stop" />
     </form>
 }
 

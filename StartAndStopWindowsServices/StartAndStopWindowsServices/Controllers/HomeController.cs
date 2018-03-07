@@ -27,6 +27,12 @@ namespace StartAndStopWindowsServices.Controllers
             Stop();
             return RedirectToAction("Index");
         }
+        [HttpPost]
+        public ActionResult RestartService()
+        {
+            Restart();
+            return RedirectToAction("Index");
+        }
 
         private void Stop()
         {
@@ -44,9 +50,34 @@ namespace StartAndStopWindowsServices.Controllers
             ServiceController sc = new ServiceController("MyWindowServiceWithTopshelf");
             if(sc.Status != ServiceControllerStatus.Running && sc.Status != ServiceControllerStatus.StartPending)
             {
+                try
+                {
+                    TimeSpan timeOut = TimeSpan.FromMilliseconds(5000);
+                    sc.Start();
+                    sc.WaitForStatus(ServiceControllerStatus.Running, timeOut);
+                }
+                catch(Exception ex)
+                {
+
+                }
+                
+            }
+        }
+        public static void Restart()
+        {
+            ServiceController service = new ServiceController("MyWindowServiceWithTopshelf");
+            try
+            {
                 TimeSpan timeOut = TimeSpan.FromMilliseconds(5000);
-                sc.Start();
-                sc.WaitForStatus(ServiceControllerStatus.Running, timeOut);
+                service.Stop();
+                service.WaitForStatus(ServiceControllerStatus.Stopped, timeOut);
+
+                service.Start();
+                service.WaitForStatus(ServiceControllerStatus.Running, timeOut);
+            }
+            catch
+            {
+                // ...
             }
         }
 

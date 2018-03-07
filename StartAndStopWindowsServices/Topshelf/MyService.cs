@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Topshelf.MyJob;
 
 namespace Topshelf
 {
     public class MyService
     {
+        JobScheduler scheduler;
         public void Start()
         {
-            System.IO.File.Create(Environment.CurrentDirectory + "start.txt");
-            System.IO.File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "start.txt", "start");
+            scheduler = new JobScheduler();
+            scheduler.Start();
         }
         public void Stop()
         {
-            System.IO.File.Create(Environment.CurrentDirectory + "stop.txt");
-            System.IO.File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "stop.txt", "stop");
+            scheduler = new JobScheduler();
+            scheduler.Start();
         }
     }
     
